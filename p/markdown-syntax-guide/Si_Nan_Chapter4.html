@@ -1,0 +1,1662 @@
+<!doctype html>
+<html lang=en-us dir=ltr>
+	<head>
+		<meta charset=utf-8>
+		<meta name=viewport content='width=device-width,initial-scale=1'>
+		<meta name=description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+		<title>萬鬼潛行夜遊園</title>
+
+		<link rel=canonical href=https://demo.stack.jimmycai.com/p/markdown-syntax-guide/> <link rel=stylesheet href=../../scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css> <meta property='og:title' content="Markdown Syntax Guide">
+		<meta property='og:description' content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+		<meta property='og:url' content='https://demo.stack.jimmycai.com/p/markdown-syntax-guide/'>
+		<meta property='og:site_name' content='Hugo Theme Stack Starter'>
+		<meta property='og:type' content='article'>
+		<meta property='article:section' content='Post'>
+		<meta property='article:tag' content='markdown'>
+		<meta property='article:tag' content='css'>
+		<meta property='article:tag' content='html'>
+		<meta property='article:tag' content='themes'>
+		<meta property='article:published_time' content='2023-09-07T00:00:00+00:00'>
+		<meta property='article:modified_time' content='2023-09-07T00:00:00+00:00'>
+		<meta name=twitter:title content="Si_Nan_Chapter4">
+		<meta name=twitter:description content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+		<link rel="shortcut icon" href=/favicon.png> </head> <body class=article-page>
+		<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script>
+		<script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
+		<style>
+
+			.column-list {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.column {
+				padding: 0 1em;
+			}
+			
+			.column:first-child {
+				padding-left: 0;
+			}
+			
+			.column:last-child {
+				padding-right: 0;
+			}
+			
+			.table_of_contents-item {
+				display: block;
+				font-size: 0.875rem;
+				line-height: 1.3;
+				padding: 0.125rem;
+			}
+			
+			.table_of_contents-indent-1 {
+				margin-left: 1.5rem;
+			}
+			
+			.table_of_contents-indent-2 {
+				margin-left: 3rem;
+			}
+			
+			.table_of_contents-indent-3 {
+				margin-left: 4.5rem;
+			}
+			
+			.table_of_contents-link {
+				text-decoration: none;
+				opacity: 0.7;
+				border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+			}
+			
+			table,
+			th,
+			td {
+				border: 1px solid rgba(55, 53, 47, 0.09);
+				border-collapse: collapse;
+			}
+			
+			table {
+				border-left: none;
+				border-right: none;
+			}
+			
+			th,
+			td {
+				font-weight: normal;
+				padding: 0.25em 0.5em;
+				line-height: 1.5;
+				min-height: 1.5em;
+				text-align: left;
+			}
+			
+			th {
+				color: rgba(55, 53, 47, 0.6);
+			}
+			
+			ol,
+			ul {
+				margin: 0;
+				margin-block-start: 0.6em;
+				margin-block-end: 0.6em;
+			}
+			
+			li > ol:first-child,
+			li > ul:first-child {
+				margin-block-start: 0.6em;
+			}
+			
+			ul > li {
+				list-style: disc;
+			}
+			
+			ul.to-do-list {
+				padding-inline-start: 0;
+			}
+			
+			ul.to-do-list > li {
+				list-style: none;
+			}
+			
+			.to-do-children-checked {
+				text-decoration: line-through;
+				opacity: 0.375;
+			}
+			
+			ul.toggle > li {
+				list-style: none;
+			}
+			
+			ul {
+				padding-inline-start: 1.7em;
+			}
+			
+			ul > li {
+				padding-left: 0.1em;
+			}
+			
+			ol {
+				padding-inline-start: 1.6em;
+			}
+			
+			ol > li {
+				padding-left: 0.2em;
+			}
+			
+			.mono ol {
+				padding-inline-start: 2em;
+			}
+			
+			.mono ol > li {
+				text-indent: -0.4em;
+			}
+			
+			.toggle {
+				padding-inline-start: 0em;
+				list-style-type: none;
+			}
+			
+			/* Indent toggle children */
+			.toggle > li > details {
+				padding-left: 1.7em;
+			}
+			
+			.toggle > li > details > summary {
+				margin-left: -1.1em;
+			}
+			
+			.selected-value {
+				display: inline-block;
+				padding: 0 0.5em;
+				background: rgba(206, 205, 202, 0.5);
+				border-radius: 3px;
+				margin-right: 0.5em;
+				margin-top: 0.3em;
+				margin-bottom: 0.3em;
+				white-space: nowrap;
+			}
+			
+			.collection-title {
+				display: inline-block;
+				margin-right: 1em;
+			}
+			
+			.page-description {
+			    margin-bottom: 2em;
+			}
+			
+			.simple-table {
+				margin-top: 1em;
+				font-size: 0.875rem;
+				empty-cells: show;
+			}
+			.simple-table td {
+				height: 29px;
+				min-width: 120px;
+			}
+			
+			.simple-table th {
+				height: 29px;
+				min-width: 120px;
+			}
+			
+			.simple-table-header-color {
+				background: rgb(247, 246, 243);
+				color: black;
+			}
+			.simple-table-header {
+				font-weight: 500;
+			}
+			
+			time {
+				opacity: 0.5;
+			}
+			
+			.icon {
+				display: inline-block;
+				max-width: 1.2em;
+				max-height: 1.2em;
+				text-decoration: none;
+				vertical-align: text-bottom;
+				margin-right: 0.5em;
+			}
+			
+			img.icon {
+				border-radius: 3px;
+			}
+			
+			.user-icon {
+				width: 1.5em;
+				height: 1.5em;
+				border-radius: 100%;
+				margin-right: 0.5rem;
+			}
+			
+			.user-icon-inner {
+				font-size: 0.8em;
+			}
+			
+			.text-icon {
+				border: 1px solid #000;
+				text-align: center;
+			}
+			
+			.page-cover-image {
+				display: block;
+				object-fit: cover;
+				width: 100%;
+				max-height: 30vh;
+			}
+			
+			.page-header-icon {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+			}
+			
+			.page-header-icon-with-cover {
+				margin-top: -0.72em;
+				margin-left: 0.07em;
+			}
+			
+			.page-header-icon img {
+				border-radius: 3px;
+			}
+			
+			.link-to-page {
+				margin: 1em 0;
+				padding: 0;
+				border: none;
+				font-weight: 500;
+			}
+			
+			p > .user {
+				opacity: 0.5;
+			}
+			
+			td > .user,
+			td > time {
+				white-space: nowrap;
+			}
+			
+			input[type="checkbox"] {
+				transform: scale(1.5);
+				margin-right: 0.6em;
+				vertical-align: middle;
+			}
+			
+			p {
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+			}
+			
+			.image {
+				border: none;
+				margin: 1.5em 0;
+				padding: 0;
+				border-radius: 0;
+				text-align: center;
+			}
+			
+			.code,
+			code {
+				background: rgba(135, 131, 120, 0.15);
+				border-radius: 3px;
+				padding: 0.2em 0.4em;
+				border-radius: 3px;
+				font-size: 85%;
+				tab-size: 2;
+			}
+			
+			code {
+				color: #eb5757;
+			}
+			
+			.code {
+				padding: 1.5em 1em;
+			}
+			
+			.code-wrap {
+				white-space: pre-wrap;
+				word-break: break-all;
+			}
+			
+			.code > code {
+				background: none;
+				padding: 0;
+				font-size: 100%;
+				color: inherit;
+			}
+			
+			blockquote {
+				font-size: 1.25em;
+				margin: 1em 0;
+				padding-left: 1em;
+				border-left: 3px solid rgb(55, 53, 47);
+			}
+			
+			.bookmark {
+				text-decoration: none;
+				max-height: 8em;
+				padding: 0;
+				display: flex;
+				width: 100%;
+				align-items: stretch;
+			}
+			
+			.bookmark-title {
+				font-size: 0.85em;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				height: 1.75em;
+				white-space: nowrap;
+			}
+			
+			.bookmark-text {
+				display: flex;
+				flex-direction: column;
+			}
+			
+			.bookmark-info {
+				flex: 4 1 180px;
+				padding: 12px 14px 14px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			
+			.bookmark-image {
+				width: 33%;
+				flex: 1 1 180px;
+				display: block;
+				position: relative;
+				object-fit: cover;
+				border-radius: 1px;
+			}
+			
+			.bookmark-description {
+				color: rgba(55, 53, 47, 0.6);
+				font-size: 0.75em;
+				overflow: hidden;
+				max-height: 4.5em;
+				word-break: break-word;
+			}
+			
+			.bookmark-href {
+				font-size: 0.75em;
+				margin-top: 0.25em;
+			}
+			
+			.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+			.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+			.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+			.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+			.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+			.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+			.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+			.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+			.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+			.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+			.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+			.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+			.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+			.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+			.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+			.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+			.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+			.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+			.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+			.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+			.highlight-default {
+				color: rgba(55, 53, 47, 1);
+			}
+			.highlight-gray {
+				color: rgba(120, 119, 116, 1);
+				fill: rgba(120, 119, 116, 1);
+			}
+			.highlight-brown {
+				color: rgba(159, 107, 83, 1);
+				fill: rgba(159, 107, 83, 1);
+			}
+			.highlight-orange {
+				color: rgba(217, 115, 13, 1);
+				fill: rgba(217, 115, 13, 1);
+			}
+			.highlight-yellow {
+				color: rgba(203, 145, 47, 1);
+				fill: rgba(203, 145, 47, 1);
+			}
+			.highlight-teal {
+				color: rgba(68, 131, 97, 1);
+				fill: rgba(68, 131, 97, 1);
+			}
+			.highlight-blue {
+				color: rgba(51, 126, 169, 1);
+				fill: rgba(51, 126, 169, 1);
+			}
+			.highlight-purple {
+				color: rgba(144, 101, 176, 1);
+				fill: rgba(144, 101, 176, 1);
+			}
+			.highlight-pink {
+				color: rgba(193, 76, 138, 1);
+				fill: rgba(193, 76, 138, 1);
+			}
+			.highlight-red {
+				color: rgba(212, 76, 71, 1);
+				fill: rgba(212, 76, 71, 1);
+			}
+			.highlight-default_background {
+				color: rgba(55, 53, 47, 1);
+			}
+			.highlight-gray_background {
+				background: rgba(241, 241, 239, 1);
+			}
+			.highlight-brown_background {
+				background: rgba(244, 238, 238, 1);
+			}
+			.highlight-orange_background {
+				background: rgba(251, 236, 221, 1);
+			}
+			.highlight-yellow_background {
+				background: rgba(251, 237, 214, 1);
+			}
+			.highlight-teal_background {
+				background: rgba(237, 243, 236, 1);
+			}
+			.highlight-blue_background {
+				background: rgba(231, 243, 248, 1);
+			}
+			.highlight-purple_background {
+				background: rgba(244, 240, 247, 0.8);
+			}
+			.highlight-pink_background {
+				background: rgba(249, 238, 243, 0.8);
+			}
+			.highlight-red_background {
+				background: rgba(253, 235, 236, 1);
+			}
+			.block-color-default {
+				color: inherit;
+				fill: inherit;
+			}
+			.block-color-gray {
+				color: rgba(120, 119, 116, 1);
+				fill: rgba(120, 119, 116, 1);
+			}
+			.block-color-brown {
+				color: rgba(159, 107, 83, 1);
+				fill: rgba(159, 107, 83, 1);
+			}
+			.block-color-orange {
+				color: rgba(217, 115, 13, 1);
+				fill: rgba(217, 115, 13, 1);
+			}
+			.block-color-yellow {
+				color: rgba(203, 145, 47, 1);
+				fill: rgba(203, 145, 47, 1);
+			}
+			.block-color-teal {
+				color: rgba(68, 131, 97, 1);
+				fill: rgba(68, 131, 97, 1);
+			}
+			.block-color-blue {
+				color: rgba(51, 126, 169, 1);
+				fill: rgba(51, 126, 169, 1);
+			}
+			.block-color-purple {
+				color: rgba(144, 101, 176, 1);
+				fill: rgba(144, 101, 176, 1);
+			}
+			.block-color-pink {
+				color: rgba(193, 76, 138, 1);
+				fill: rgba(193, 76, 138, 1);
+			}
+			.block-color-red {
+				color: rgba(212, 76, 71, 1);
+				fill: rgba(212, 76, 71, 1);
+			}
+			.block-color-default_background {
+				color: inherit;
+				fill: inherit;
+			}
+			.block-color-gray_background {
+				background: rgba(241, 241, 239, 1);
+			}
+			.block-color-brown_background {
+				background: rgba(244, 238, 238, 1);
+			}
+			.block-color-orange_background {
+				background: rgba(251, 236, 221, 1);
+			}
+			.block-color-yellow_background {
+				background: rgba(251, 237, 214, 1);
+			}
+			.block-color-teal_background {
+				background: rgba(237, 243, 236, 1);
+			}
+			.block-color-blue_background {
+				background: rgba(231, 243, 248, 1);
+			}
+			.block-color-purple_background {
+				background: rgba(244, 240, 247, 0.8);
+			}
+			.block-color-pink_background {
+				background: rgba(249, 238, 243, 0.8);
+			}
+			.block-color-red_background {
+				background: rgba(253, 235, 236, 1);
+			}
+			.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+			.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+			.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+			.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+			.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+			.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+			.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+			.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+			.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+			.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+			.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+			.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+			.select-value-color-pageGlass { background-color: undefined; }
+			.select-value-color-washGlass { background-color: undefined; }
+			
+			.checkbox {
+				display: inline-flex;
+				vertical-align: text-bottom;
+				width: 16;
+				height: 16;
+				background-size: 16px;
+				margin-left: 2px;
+				margin-right: 5px;
+			}
+			
+			.checkbox-on {
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+			}
+			
+			.checkbox-off {
+				background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+			}
+		</style>
+
+		<div class="container main-container flex on-phone--column extended">
+			<aside class="sidebar left-sidebar sticky">
+				<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+					<span class=hamburger-box>
+						<span class=hamburger-inner></span>
+					</span>
+				</button>
+				<header>
+					<figure class=site-avatar>
+						<a href="../../index.html"/>
+						<img src=../../img/avatar_hu897059592634026878.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+						</a>
+						<span class=emoji>🍥</span>
+					</figure>
+					<div class=site-meta>
+						<h1 class=site-name>
+							<a href="../../index.html"/>青蔥小說</a>
+						</h1>
+						<h2 class=site-description>##</h2>
+					</div>
+				</header>
+				<!--<ol class=menu-social>
+					<li>
+						<a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank title=GitHub rel=me>
+							<svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href=https://twitter.com target=_blank title=Twitter rel=me>
+							<svg class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753C20.18 7.773 21.692 5.25 22 4.009z" />
+							</svg>
+						</a>
+					</li>
+				</ol>-->
+				<ol class="menu" id="main-menu">
+				<li class="current">
+					<a href="../../index.html">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z"></path>
+					<polyline points="5 12 3 12 12 3 21 12 19 12"></polyline>
+					<path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+					<path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+					</svg>
+					<span>首頁</span></a>
+				</li>
+				<li>
+					<a href="../../archives/index.html">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z"></path>
+					<rect x="3" y="4" width="18" height="4" rx="2"></rect>
+					<path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10"></path>
+					<line x1="10" y1="12" x2="14" y2="12"></line>
+					</svg> <span>小說列表</span></a>
+				</li>
+				
+				<li>
+					<a href="../../links/index.html">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+					<path stroke="none" d="M0 0h24v24H0z"></path>
+					<path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5"></path>
+					<path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5"></path>
+					</svg>
+					<span>友站連結(施工中)</span></a>
+				</li>
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						<li id="dark-mode-toggle">
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z"></path>
+							<circle cx="8" cy="12" r="2"></circle>
+							<rect x="2" y="6" width="20" height="12" rx="6"></rect>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z"></path>
+							<circle cx="16" cy="12" r="2"></circle>
+							<rect x="2" y="6" width="20" height="12" rx="6"></rect>
+							</svg>
+							<span>Dark Mode</span>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</aside>
+			<aside class="sidebar right-sidebar sticky">
+				<section class="widget archives">
+					<div class=widget-icon>
+						<svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" />
+							<line x1="5" y1="9" x2="19" y2="9" />
+							<line x1="5" y1="15" x2="19" y2="15" />
+							<line x1="11" y1="4" x2="7" y2="20" />
+							<line x1="17" y1="4" x2="13" y2="20" />
+						</svg>
+					</div>
+					<h2 class="widget-title section-title">章節列表</h2>
+					<div class=widget--toc>
+						<nav id=TableOfContents>
+							<ol>
+								<li>
+									<a href=#one>#29 萬鬼潛行夜遊園 1</a>
+								</li>
+								<li>
+									<a href=#two>#30 萬鬼潛行夜遊園 2</a>
+								</li>
+								<li>
+									<a href=#three>#31 萬鬼潛行夜遊園 3</a>
+								</li>
+								<li>
+									<a href=#four>#32 萬鬼潛行夜遊園 4</a>
+								</li>
+								<li>
+									<a href=#five>#33 萬鬼潛行夜遊園 5</a>
+								</li>
+								<li>
+									<a href=#six>#34 漩渦祕境海中城 6</a>
+								</li>
+								
+							</ol>
+						</nav>
+					</div>
+				</section>
+			</aside>
+			<main class="main full-width">
+				<article class=main-article>
+					<header class=article-header>
+						<div class=article-details>
+							<header class=article-category>
+								<a href=/categories/themes/>連載中
+								   </a> <a href=/categories/syntax/>司南 </a> </header> <div class=article-title-wrapper>
+									<h2 class=article-title>
+										<!--<a href=/p/markdown-syntax-guide/>Markdown Syntax Guide</a> </h2> <h3 class=article-subtitle>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</h3>-->
+						</div>
+						<!--<footer class=article-time>
+							<div>
+								<svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" />
+									<path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4" />
+									<circle cx="18" cy="18" r="4" />
+									<path d="M15 3v4" />
+									<path d="M7 3v4" />
+									<path d="M3 11h16" />
+									<path d="M18 16.496V18l1 1" />
+								</svg>
+								<time class=article-time--published>Sep 07, 2023</time>
+							</div>
+							<div>
+								<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+									<path stroke="none" d="M0 0h24v24H0z" />
+									<circle cx="12" cy="12" r="9" />
+									<polyline points="12 7 12 12 15 15" />
+								</svg>
+								<time class=article-time--reading>3 minute read</time>
+							</div>
+						</footer>-->
+		</div>
+		</header>
+		<section class=article-content>
+			<!--<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>-->
+			<!--<h2 id=headings>Headings</h2>
+			<p>The following HTML <code>&lt;h1></code>—<code>&lt;h6></code> elements represent six levels of section headings. <code>&lt;h1></code> is the highest section level while <code>&lt;h6></code> is the lowest.</p>
+			<h1 id=h1>H1</h1>
+			<h2 id=h2>H2</h2>
+			<h3 id=h3>H3</h3>
+			<h4 id=h4>H4</h4>
+			<h5 id=h5>H5</h5>
+			<h6 id=h6>H6</h6>-->
+			<h2 id=one>#29 萬鬼潛行夜遊園 1</h2>
+			<div class="page-body">
+				<pre><code class="language-Go" style="white-space:pre-wrap;word-break:break-all">縱使雨燐心裡再有不情願，也磨不過褚守意念堅定。雨燐看了褚守一段時間，倒也沒有那般厭她了。
+
+而安向晚依舊被亦暖攔在房中，亦暖也是堅持，按時辰給她送膳送藥，遠比雨燐木炎還要勤勞，這不，安向晚早早換上正裝，把握著時機偷溜出門，但她才推開門，便覺有甚麼東西朝她腳下襲來，她低頭去看，一根枯木不偏不倚的打在她腳邊的門檻上。
+
+安向晚，「…。」她抬頭去看，亦暖坐在院子裡的大樹下乘涼，毛色雪白的狗子吐著舌頭，猛朝亦暖搖尾巴，亦暖一手撫了撫狗頭，一手還伸直著，向著她的方向。
+
+安向晚默默退了回去，心裡嘀咕著，這獸爪當真邪乎，連那麼遠的距離都能打入腳邊，這勁力非凡，不該是女孩子家有的模樣，忒兇殘了！
+
+亦暖將狗子驅趕走，才起身，從容的朝屋子走去。安向晚哪裡也不能去，房中暑氣重，她悶得慌，便在屋簷下坐著乘涼，亦暖在她身側坐下，說著，「怎麼今天起得這般早？我還來不及去備早膳。既然你起了，我便索性問問你，你想吃甚麼？」
+
+安向晚目視遠方的矮牆，她悶悶道，「膩口了，我想上街吃。」
+
+亦暖愣了下，側頭去看她。安向晚又說，「我不暈頭了，人也好些了，你們總是成天把我關在屋中，我都要抑鬱成病了。」
+
+「那好罷。」亦暖鬆了口，卻說，「但我不能放你一個人。雨燐或者我，你得選一個隨行。」
+
+「木炎。」安向晚皺眉。
+
+「沒有他。」亦暖斬鐵截釘道。
+
+安向晚不服氣地，也轉過頭來看她，哼著氣道，「木炎也是司南裡的一份子，怎能沒有他！」
+
+「那我喊他去給你買，你今日都別要出門了。」說著，亦暖站起身，眼看就要走。
+
+安向晚見狀，心裡急了，連忙追上去，扯住她的袖口。亦暖感覺到了，回頭瞥了一眼手下，才又掃向安向晚，「可想好了？」
+
+「你們這般欺負人，我又如何能有選擇？」安向晚心裡憋屈，「雨燐好不容易才對褚守改觀，就不打擾她倆了。」
+
+亦暖莞爾，「好。」
+
+街上人潮不少，許是那抹豔陽還不滾燙，行人腳步匆匆，趕往市集置辦貨物。亦暖和安向晚並肩而行，街邊有賣包子的攤販，亦暖指了指，安向晚搖頭，又看往一側，是賣煎酥餅的，亦暖才要開口問，安向晚卻先抓過她的手，逕自往前走，亦暖被她拉著走，身形稍顯不穩。
+
+墨黑的秀髮被收拾起，束在腦後，隨著行走，青絲擺動，亦暖目光從掠過那晃動的馬尾，落在那人衣領處，雪白的頸項透著微紅，泛著健康的膚色。亦暖問，「安姑娘，你要上哪去？」
+
+「我不喜吃路邊攤，沙塵多。前邊有家茶樓，我們去那吃，他們家的灌湯包可好吃了。」安向晚沒回頭，她走得也不是很急，亦暖適應了一陣，便踩上她的步伐，回到她身側的位置。
+
+「我不熟悉南城，還要你帶著我出來吃，安姑娘，真是不好意思。」
+
+「說了讓木炎帶我，是你不願意的，你豈又會好意思。」
+
+「…。」
+
+安向晚積怨已久，一逮到機會便要發洩，亦暖閉上嘴巴，自當理虧。
+
+二人入了飯館，亦暖跟在安向晚身後，安向晚許是這裡的熟客，只見她朝掌櫃揚了揚手，才打過招呼，那邊店小二瞧見她，便匆忙的跑來帶路，店小二和顏悅色道，「安姑娘，好一段時日沒見到您了，近來可還安好？」
+
+「一切如常。」
+
+店小二引領她倆往前。按著安向晚的習慣，店小二將人往二樓雅間指引，他邊走邊說，「姑娘，今日王大爺不在，您看…要不吃些別的？」
+
+安向晚想了想，直說，「我前些日子舊疾復發，大病初癒，不好吃些太重口的菜。」
+
+店小二站定，二人相機入座，安向晚看向亦暖，笑問，「可有甚麼忌口的菜？」
+
+亦暖搖頭，「你隨意。」
+
+「我隨意？可當真？」安向晚不待她回覆，便拉過店小二的胳膊，側耳說了幾句，店小二凝神聽著，一邊點頭，旋後，他躬身，退了出去。
+
+不多時，店小二將膳食送來，清粥小菜一字排開，亦暖掃了飯桌一眼，全是些淡口的菜，這才放心下來。
+
+二人慢條斯理的用著膳，也不著急時間，吃至半飽，安向晚添了茶水，也給亦暖斟了一杯。
+
+「多謝。」亦暖握著杯緣，沒馬上喝。
+
+安向晚輕沾一口，抬眸覷她，她輕喚她一聲，「亦暖。」
+
+亦暖應了一聲，安向晚繼續說，「你們待在司南也有月餘，褚守她…應當回去看一趟。我非是懷疑重明鳥所言，只是，有些事情，還是得親自走一趟，親眼所見，才好放心。」
+
+「我也有此打算，但你身子抱恙，我們不差這幾日時間，待你康復，再出發也不遲。」亦暖持筷子，在前邊一盤滷製的花生上，小巧圓潤的花生滑手，她周旋幾下，才成功夾起。
+
+「我已經無礙。」安向晚看著她夾花生，一連幾粒，盤中所剩不多。
+
+「此趟前去，我想請你們隨行，一同返往，不知安姑娘意下如何？」亦暖將挑起的花生，放入口中，她薄唇輕輕沾上筷子，將筷子按回桌上。安向晚看著她的動作，掃了一眼飯桌，菜餚還剩不少，就獨獨空了一盤。
+
+「我們也有要事在身，可不是去玩的…」安向晚如是說道，但她面上並不覺困擾，反而噙著一抹意味深重的笑。
+
+「我們自當也會護送你們。」
+
+「亦暖，有些事情，我不希望你們被牽扯進來。我的身份不受鬼界見待，往日，褚守還有一層鬼差的身份在，若有萬一，也好拿她作藉口，可如今，她職責不在，若是不慎遇險，你們只會受我牽連，亦暖，這不值當。」
+
+「值當不值當，在我，不在你。」亦暖抿了口茶，也望著安向晚，「安姑娘，我的直覺告訴我，你需要我的幫助，而我，也需要你來協助。」
+
+「我一弱女子，低調於市，鮮為人知，如何能夠幫得了你？」窗外看得到街上景緻，日頭烈了許多，街上的人們像是那熱鍋上的螻蟻，行路更顯匆忙。
+
+亦暖默了默，安向晚看她猶豫，便說道，「亦暖，做人之本，坦然誠信為首要。」
+
+「褚守如今沒了差事，我便不好拿她打探鬼界情報…」亦暖嘆息一聲，安向晚勾起嘴角，樂意聽她往下說，「我在尋物，東西應是落在了鬼界，我不曉得如何稱呼它，我本想藉著褚守，以差事為由，一邊助她，一邊探索鬼界，巡查下落。安姑娘，你說得對，有褚守鬼差這一身份作遮掩，要在鬼界行動，的確方便多了。」
+
+「原來是這般…」安向晚輕笑一聲，「先前，你說褚守於你有恩，這事又是如何？」
+
+亦暖為取得安向晚幫助，不得不把自己底細道清，安向晚這人相當謹慎，心思又沉，若是惹她疑心，莫說是要得她幫助了，就怕反被她利用得淋漓盡致，尚還不知。
+
+「人類肉身過於脆弱，若要擅闖鬼界，恐是經不住半點折騰。於是，我便想了個法子…」亦暖伸出手，在安向晚面前展了展五指，她闔眼再睜，眼底幻出幽綠纖細獸瞳，而她的指骨正變化著，鋒利的銳爪將她的人骨曲折變形，直到扭轉成猛獸的前掌。
+
+「這獸爪便是我想到的法子…」亦暖說，「成精野獸相當難尋，且以我肉體凡身，也無從應對，於是，我便四處蒐羅奇聞軼事，我沿著蛛絲馬跡，終是讓我尋到了個沒落的妖怪窩。那裡妖獸不多，且多和善，平時以人身自居，並不多事，我在那裡待上一段時日，我的目標不在那些妖獸身上，而是在他們葬下的那些個祖輩…」
+
+亦暖握起了拳，她語氣極輕，似在懺悔，卻又飽含了自己不得已的苦衷，「他們人很好，是我負了他們。我曉得自己能力不足以抗衡妖獸，便趁夜裏，刨開了故去妖獸的墳墓，取其指骨，埋進我的骨肉裡。我擔心難以成事，便又將故去妖獸的獸丹，食下進補…」
+
+聞言，安向晚神色驟變，她氣極，卻又不能大聲斥喝，她只能飽含怒意，將聲音抑制得極低，以至於她開口時，聲色顫抖著，以是怒極之姿，「胡鬧！你可知你這般做，與那邪道又有何異！妖獸潛藏於市井間，與人類和平共處，便是徒求一個世態安然，他們既不做壞，已然放低姿態生存，你又何故這般要去踐踏他們的尊嚴？」
+
+「我知曉自己罪孽深重，待我尋回失物，我定會去同他們賠罪。在此之前，這獸爪，還請他們再借一借我。」
+
+「你這是不要命了…」安向晚搖頭嘆息。
+
+「安姑娘，此事於我來說，不惜拚盡全力也要達成，即便是犧牲性命，也不足惜。」亦暖苦笑一聲，「如今，我沒了鬼差同伴的身份，只求安姑娘能夠帶上我，讓我見一見你背後的那位人物。你曾言，你取玉面鬼娃，一是為了交差，一是為了尋求真相，如今我們不會再因差事為由，而阻礙你，那麼想必，你定會拿著玉面鬼娃回去交差的，對麼？」
+
+安向晚沉默著，亦暖說得不錯，這玉面鬼娃於她，如今已毫無用處，唯有將其上交繳，指不定還能夠換取到甚麼情報…
+
+「你很聰穎。但我助你，自己又能得到甚麼好處？先前，在你眼中，我是個貪得無厭的鼠輩，只見利益。也確實，我是個商人，很多時候，做事是不能夾雜私人情緒的。」安向晚仰起頭，帶著審視的目光，睨視著她，「亦暖，你身上沒有值得我協助你的籌碼。」
+
+想來亦暖也是曉得這點的，她緊張的吞了吞口沫，斂眉，小心翼翼道，「我可以替作你的腿腳，在你不便去入鬼界時，為你效命…」說著，亦暖才恍悟過來，她猛地抬頭去看，安向晚微微勾唇，皮笑肉不笑的…
+
+安向晚就著她的目光，說，「我已有了雨燐為我效命，如今，褚守因著她的救命之恩，揚言要護雨燐周全，保她無礙。如此，既有她們替我效勞，又何須要再勞煩你？」
+
+亦暖啞口，她先前萬千沒有料想到這一層，如今褚守非但失去職位，還被迫倒戈向她們那邊。亦暖這是被截了雙翼，置若棄子，她已一無用處，眼下，只能等著安向晚向她發難，就地處決。
+
+猶如芒刺在背，亦暖垂喪著腦袋，她已失去了談判的籌碼，這一局，確實是她敗得徹底。
+
+「但是，」安向晚開了口，她一改先前的嚴肅，她淺笑一聲，「我非是那鼠輩。之前我也說了，精誠以待，即為盟友。和氣生財，永續長存，方能細水長流。」
+
+「那…」亦暖身姿一震，面上帶著冀望。安向晚迎著她探尋的目光，點了點頭，「我可以幫你，但等你事成後，我要你留在司南，替我做事。」
+
+「好。」
+
+亦暖二話不說，便答應。安向晚發笑，又搖了搖頭，「你可別答應得這般早，你且先將那邪物消退了去，待你仔細想過後，再回答我也不遲。你要知道，你一旦決定替我做事，那便等同於做了一張賣身契在司南。」</code></pre>
+				<p id="6c538e87-c8b8-4037-8c05-9bc3c52a2840" class="">
+				</p>
+			</div>
+
+
+			<h2 id=two>#30 萬鬼潛行夜遊園 2</h2>
+			<div class="page-body">
+				<pre><code class="language-Go" style="white-space:pre-wrap;word-break:break-all">亦暖退去銳爪，恢復常人姿態，二人結清了飯前，踏出飯館，時間尚早，近午時。周邊往來的人潮多，臨近飯點，館子生意好，忙得不可開交，安向晚離去前，與那掌櫃揚了揚手，算是打過招呼。那邊店小二手裡提著一壺酒，急忙跑來，將物件遞給安向晚，「姑娘，您上回託付的酒水，貨已經送至。」
+
+安向晚接過手，謝道，「多謝。回頭，你替我向陳老闆帶句話，安某改日必定登門拜訪。」
+
+店小二點了點頭，目送二人離去。
+
+難得走出家門，安向晚沒想要這麼早歸家，亦暖曉得安向晚憋了好些日子，心裡乏悶，便也隨著她去。天氣正好，艷陽高照，安向晚耐不住這暑氣，也不往街上走，她越走越偏，亦暖一路跟隨，直到安向晚走入了山道，似要往山中去，亦暖遲疑了一下，還是出言喊住她，「安姑娘，我們可是要上山裡頭麼？」
+
+安向晚回身，揚了揚手裡的酒壺，面色柔和，「嗯，我想去見一位老朋友。」
+
+沐浴在林蔭間，掩去了大半暑氣，光線被樹葉阻絕，破碎地零落在泥地上，二人踩過點點光暈，走入深林。
+
+行了約莫半個時辰，亦暖瞧見前方有座林園，安向晚腳步不停，身影穿梭過園子，那林園前的柵門敞開，許是年久失修，亦暖走過時，瞧了一眼，老舊的木門上留下一道深刻的刀痕，勁力貫穿，隱約可見狹長破口。
+
+安向晚在前喚了她一聲，亦暖收回視線，提步跟上。安向晚沒走入屋舍，她繞過建築，停在一處墓碑前，亦暖站在她旁邊，見她將手裡的酒，撥開瓶口，將其傾倒在墓碑上，酒水淋濕了石碑，留下深淺的顏色。石碑上字跡模糊，似被人惡意抹去，留下多道刻痕，已看不出底下埋藏的人是誰。
+
+「陳老闆釀酒的手藝一絕，我可是費了好些心力才弄來這麼一壺酒。」安向晚對著石碑說，「木炎在司南過得很好。再過兩年，待他穩重些了，我便替他尋個好姑娘，有了妻兒，屆時，你在九泉之下應當也能安心了罷。」
+
+言罷，安向晚將酒壺放到地上，轉身離去，亦暖看了石碑一眼，才去追安向晚。
+
+「安姑娘！」
+
+安向晚腳程不快，走了好長一段路，她走進荒廢的屋舍下，躲著陰影處乘涼，亦暖走近時，安向晚正好回身，二人目光不經意碰觸，安向晚笑了笑，「那位是木炎的恩人，卻也是他的仇人，而我受他之託，擔起扶養木炎的責任。」
+
+亦暖望著她，心裡對安向晚充滿著許多困惑，「安姑娘，你看起來很年輕。我聽木炎喚你作安姐姐。」
+
+安向晚莞爾，她目視遠方，感慨道，「我帶走木炎的時候，他不過五歲。當時，我跟著商隊，途經此處時，不幸遇上了山匪，商隊覆滅，只有我逃了出來，木炎雙親被山匪殺害，而他年幼尚有價值，便被捉了去。」
+
+說到此處，安向晚突然歎息一聲，她側了頭，向亦暖遞出一個無奈的目光，「我本是不願擔上這等禍事，可奈何，我的商貨還在那車上，被那幫匪賊一併搜刮了去，我一時氣不過，便血洗了這山寨子。」
+
+「當時，這寨子的老大，似乎才上位，在寨中地位不穩固，而他無心做壞，想就此金盆洗手，奈何他管不動自己手下，才釀下這等禍事。」安向晚雙臂輕搭在欄杆邊，做了一個慵懶的姿勢，她呼出一口氣，「當時我留了他一命的。」
+
+「取回貨物後，我便要走。他卻為了木炎這孩子，與手下起了爭執，我無意捲入他們之間的紛爭，可這人相當固執，死活賴著我，不願讓我走…」
+
+亦暖驚疑一聲，「你身手不差，若是執意要走，又豈會被攔下？」
+
+「唉…他看透了我呀。」安向晚指了指身後的屋子，用著不可置信的語氣道，「誰人如何能料到，區區一個山匪窩居然藏有萬千個珍寶銀子！」
+
+「…。」
+
+安向晚捶了欄杆一下，痛心疾首道，「經營商舖不容易，僅靠雨燐去鬼界搜刮珍品，根本賺得不了甚麼。雨燐在鬼界做活，我便在人間掙財，就是想著及早穩定下來，不再過上那隨波逐流的日子。又豈知，這人生路上，誘惑何其多，人一旦被利益迷失了雙目，日後，便要為其擔上更多代價。」
+
+亦暖不受她浮誇的說詞影響，她正色道，「你就說，你在這賊窩裏，究竟撈了多少錢？」
+
+那得了便宜還賣乖的人，靦腆的舔了舔唇瓣，佯作不好意思道，「木炎可真是命中帶財，是貴人也。遇著了他後，於司南來說，可真是雪中送炭，生意蒸蒸日上。」她邊說，邊對亦暖比劃了下手指，五指大大張開。
+
+亦暖蹙眉，猜測道，「就五袋珠寶？」
+
+安向晚搖頭，「是五大袋的金幣。那袋子…可有，這麼、這麼…的大呢！」她雙手展開向外揮舞著，天真地，活像個得了甜頭的孩子。
+
+亦暖扶額，怎麼也沒想到安向晚這心思深沉的人，也曾有心性單純的時候，「你竟然謀財害命…」
+
+「真要論，那些人可不是我殺的，我至多血洗，但不至於害命，他們身上的致命傷，不是我留下的，就連這山寨大王，也是自己自刎的。」安向晚解釋道，「但他臨終前要我放過他，還囑咐我，定要好生扶養木炎，作為賠禮，便這滿屋子裏的財物贈於我。」
+
+「受人之託，終人之事，我既然收了對方的錢財，這事情自然不能馬虎。我替他們整理了林園，還給這位老大哥下了葬，為其修建墓碑…」
+
+安向晚越說越起勁，但亦暖可不傻，天底下，哪有土匪頭子這般呆頭呆腦、仁心仁厚的？亦暖出言打斷她，「打住！安姑娘，你這般能扯謊，怎麼不去街坊上當個說書先生呢？」
+
+安向晚覷了她一眼，撇了撇嘴，嘟囔一聲，「你真不好糊弄，不好玩。」
+
+「若是你這番話，說與褚守聽，她恐怕會深信不疑。」
+
+「褚守心性就似個孩子，縱然她在鬼界歷練，學了不少做事道理，但她面對的依舊是些死物，又哪能體會到這人世間的世態險惡。」安向晚失笑。
+
+亦暖點頭，附和著，「嗯，如此，我該囑咐她，離你遠一些。」
+
+二人你來我往的打鬧著，漫步離了這林園，走往山下。
+
+日暮時，林園裡有道高挑的身影走過屋舍，立在石碑前，他放下酒罈，語氣輕輕，「唉，安姐姐又偷偷背著我，過來同你敬酒了。」
+
+木炎從懷裡取出小刀，在石碑上又抹過一痕，也不管石碑上的字跡已然模糊不清，他按著慣例，每次歸來，便要將這令他厭棄的名字抹去。
+
+他洩完恨，又跪倒在墓碑前，他身姿頹喪，膝前落下深淺點點。木炎吸了吸鼻子，倔強道，「你既利益薰心，謀財害命，與這幫匪賊裡應外合，狼狽為奸，又何故要將我救下？」
+
+「你這筆交易好不值當啊…」他撫了撫墓碑，輕喊了句，「…爹。」</code></pre>
+				<p id="6c538e87-c8b8-4037-8c05-9bc3c52a2840" class="">
+				</p>
+			</div>
+
+
+			<h2 id=three>#31 萬鬼潛行夜遊園 3</h2>
+			<div class="page-body">
+				<pre><code class="language-Go" style="white-space:pre-wrap;word-break:break-all">已養了月餘的身子，再荒廢下去，怕是要開始敗壞了，安向晚收拾好行囊，走出屋外，朝著大廳去。
+
+前日她在大廳與幾人碰頭，告知將前往鬼界交付委託一事。雨燐是明白人，自然理解安向晚的意思，也願追隨，而亦暖懷有目的，鐵了心要依附安向晚，三人欲意前往，正商談著事宜，那邊褚守卻犯難，她說，「我如今不是鬼差了，再入鬼界是不是不太妥當啊？」
+
+三人聚在桌前，聽見褚守問話，紛紛回頭，雨燐用著奇怪的目光看她，「你本就是個死人了，不去鬼界待著，難道還要逗留在人世間，作亂麼？」
+
+褚守張了張口，自己明明不是那個意思，一時卻又不曉得怎麼反駁，只能無助的望向亦暖。她曉得，亦暖善解人意，最是懂她。褚守正等著亦暖替她言說幾句，卻不料，亦暖這回竟然不站在她這邊了，不知幾時與那安向晚好上了，二人有說有笑，一點也不在乎她的感受，就似乎，她眼下就和個孩子鬧脾氣一般，鬧過了也還是得同大人服軟。
+
+褚守委屈的噘起了嘴，她默默來到亦暖身後，扯了扯她的衣襬。亦暖感覺到了，覷了她一眼，好笑道，「怎麼？」
+
+「亦暖，你怎麼都不替我說點話？」
+
+亦暖瞧她一副可憐兮兮的表情，拍了拍她的肩頭，寬慰道，「只要不暴露，便沒人曉得你還活著。在鬼界，鬼差在執勤時喪命，也是尋常事，你莫要這般大驚小怪的。」
+
+「唔…」褚守鬆了手，垂下腦袋，走到一旁去。她自覺融入不了她們仨，便也不再吵鬧，全依照她們安排。
+
+櫃檯處被四個女人佔了去，木炎便讓到一旁，挑揀著貨物，往貨架上擺，他翻轉著手裡的貨物，左看右擺，也不偷閒，很是認真。
+
+先前，亦暖在茶樓答應了安向晚的條件，待她事畢，就為司南效勞。雨燐得知此事後，心中料想著，這亦暖往後便是自己人了，低頭不見抬頭見，不好再將關係打壞。她一改常態，說話語氣也收斂了幾分，「既然是要尋物，你在鬼界出入那麼多個時日，可摸清了那東西潛藏的位置？」
+
+桌上擺著一張鬼界的地圖，雨燐指向豐城，「我們要見人，需往大城去，若是順路，便繞道過去取。」
+
+亦暖搖頭，「我不曉得位置。」
+
+雨燐又問，「你要尋的是個甚麼東西？」
+
+亦暖斂下眸光，並不語。
+
+雨燐見她這般，心裡有些不舒坦，她目光一沉，似有計較。安向晚見狀，搶過話頭，淡化氣氛，「這件事我們還得再從長計議，目前我們手上握擁的情報太少了，再者，玉面鬼娃這事不能再拖延，褚守如今喪職，難保不會有人來接替她，我們還須得儘早上交。」
+
+雨燐嘆了一聲，「確實如此，可她若是不將東西尋到，便一日不能為司南效勞，若是日後我們尋物不成，她反悔了，又該如何？」
+
+這樣沒有保障的事情，別說雨燐會擔心，就連安向晚也曾想過，可是…
+
+「去往鬼界也有風險，我們無法保證她的安危，同樣的，既然她願意與我們同行，先不論東西能否找到，有她在後助我們一臂之力，也是好的。」
+
+安向晚這話說得模稜兩可，實則卻是在偏袒亦暖，雨燐不傻，如何聽不出其中的計較，但既然安向晚作為主事的都這麼說了，她也不好再多說甚麼。
+
+雨燐的擔憂，亦暖心裡也明白，她看著二人之間氣氛有些微妙，突然說，「安姑娘曾前說待人要精誠。先前我對你們多做假想，將你們錯看成鼠輩，是我不好，我同你們道歉。如今，我曉得你們為人，與那幫不顧道義的匪輩不同，我信你們，也願意助你們，希望你們能信任我。」
+
+那邊褚守聽見了，也適時說一聲，「是啊，亦暖的為人我可以保證，絕對無可能做出那背棄信義之事。」
+
+二人不再說話，算是默許了。亦暖回頭望了褚守一眼，充滿感激，兩人將將對上眼，相互一笑。
+
+幾人前往鬼界，留得木炎一人顧店。木炎面露不捨，將四人送至門口，他心裡盼好不盼壞，可話到了嘴邊，還是有些許怨懟，「安姐姐、雨燐，你們路上小心，早日歸回，若是去得太久，這司南裡的差事，僅憑我一人之力，怕是要應付不來。」
+
+安向晚走過來拍了拍他的背，與他勾肩搭背，道，「木炎，你放心，這回交完差事，我便難再去鬼界，日後，司南裡有你我，而鬼界那邊就由雨燐她們去打理。」
+
+聞言，木炎眼睛一亮，「安姐姐，這話當真？」
+
+安向晚點頭，她放低了音量，貼著他耳邊，說著悄悄話，「先前我為了救那小鬼差，壞了幻象鏡，今日我冒險走這一遭，也是為著去給某人賠罪的，此行不宜久待，待我事畢，便會歸回，這幾日，還得再勞煩你替我照看著店裡了。」
+
+安向晚說完話，便退了開，她往前走了幾步，融入隊伍裡，她回頭一望，木炎笑容燦爛，滿心期待她們早日回來，「一路平安！」
+
+從她們所在的文縣南城，去往風城，需得耗上三日時間。她們才剛入城，安向晚便去尋逗留在風城的鬼民，換了些盤纏，近日她手頭緊，經營商舖又需要用錢，這鬼界人間兩地反往，消耗可不少，安向晚斟酌著錢袋，換取了其中一部分給那鬼民。
+
+雨燐就在她旁邊，斜眼瞅了瞅錢袋，驚詫道，「安生，僅這麼些錢，如何帶上四個人？」
+
+雨燐這聲音不小，惹得鬼民好奇的望過來，安向晚捏了捏眉心，將錢袋好生收回懷裡，回道，「我自有打算。」
+
+那邊亦暖褚守就在附近，聽得雨燐驚呼聲，也紛紛往這處靠近，四個人齊聚在一起，鬼民在幾個姑娘身上打量了一陣，眸光落在一旁的褚守身上。
+
+褚守察覺到視線，稍一回頭，觸及上那鬼民的眼睛，她心下一緊，倏地，又側過身，慌忙的躲開了對方的視線。
+
+鬼民神色一凜。為首的姑娘換完盤纏就要走，鬼民站在原地，目送著四人遠去，半晌，他才轉身，朝著暗巷潛行。
+
+如今褚守不再是鬼差，那散魂丸珍貴，安向晚不想浪費，便提議讓雨燐回到雙生玉內，等她們進入鬼界後再喚出。以往她倆作伙同行時，遇到險境，安向晚沒少用過這種方法，雨燐因而見怪不怪，眼下安向晚一提，她想也不想便同意了。
+
+渡過地界口，來到鬼界大城，天色昏暗如舊，那街邊賣包子的老大爺還在招呼著新人舊客，忙得不亦樂乎，安向晚將半塊太極玉往空中一拋，落下時，雨燐身影凝聚，伸手將玉穩妥的接在掌中。
+
+褚守沒見過這種技法，一時被驚艷，連忙纏著雨燐教一教她。褚守矮著身欲要親近，卻被雨燐一巴掌抵住腦袋，雨燐語氣極淡，「你如今寄宿在雙生玉內，理應明白一些感觸，你只需依循著內心想法，方能收放自如。」
+
+「原來如此！」褚守說著就要闔眼冥想，雨燐見她這般呆傻，手揚起，往她腦袋上敲了一擊，褚守防備不及，險些咬下舌頭，她捂著頭頂，哀嚎一聲，「雨姑娘，你做何打我？」
+
+街邊的人尋聲望來，雨燐側了身，背對著那些鬼民，嚴肅的盯著褚守，道，「鬼界不比人間自由，這個理，你應該曉得，我們這還在大街上呢，你這般胡來，若是被有心人盯上了，惹來危機，又該如何？」
+
+褚守不滿的撇了撇嘴，「可你方才不也是…」
+
+「閉嘴。」雨燐橫了她一眼。
+
+「噢…」褚守手下一滑，捂上了脖子，她安份的走在雨燐身後，活像個小跟班。
+
+安向晚和亦暖就在一旁看戲，這下褚守安份了，亦暖便側頭去問安向晚，「我們這下要往何處走？」
+
+「先尋個客棧。」安向晚看著雨燐那處，說道。
+
+「我們不是趕時間麼？」
+
+「得讓褚守先學會這個技能，還有…」安向晚頓了下，「我也得做個準備。」
+
+豐城中客棧不少，裡頭居住的，卻非是常人，一般鬼民大多住在城郊，於是，這客棧中住得多是身份顯貴之人。褚守作為喪失職權的鬼差，她不好招搖，便由雨燐這鬼界常客前去交談，安、亦二人在後觀察著廳堂裡的來客，其中有幾個人，用驚疑的目光望著她們這處。
+
+亦暖瞧見了，她扯了扯安向晚的袖口，安向晚收回目光，低頭應聲，亦暖說，「我們不會是暴露了罷？為何他們總要用著奇異的目光看著我們？」她們渡過地界口時，才服下散魂丸，理應不會被鬼民識破才是，眼下受人矚目，倒是有些奇怪了。
+
+安向晚朝著亦暖說的方向，掃了一眼，又看回，「許是我們人多，又是奇裝異服罷。」她們這一行，不是白衫就是藍裝粉裝的，這在鬼界很不尋常，難免惹來旁人矚目。
+
+雨燐交付完訂金，掌櫃喊了人來，將她們帶入客房。四人跟在服侍身後，走過轉台，上了二層，當店小二指引完後，正要轉身告退，亦暖卻愣愣的開口，不解道，「我們四個人，怎麼只給了兩間房？」
+
+店小二拿錢辦事，也不管這麼多，直說，「姑娘只要了兩間房，也只交了兩間房的錢，我們自然只給了兩間房。」
+
+亦暖，「…。」這話說得繞口，亦暖面上的表情轉了幾轉，很是糾結。而那邊，雨燐拉著褚守的後領，將人拽進了房裏，悶聲一響，門被關的緊實。
+
+「這…」
+
+亦暖看了看緊閉的門，又回頭去安向晚，她手還懸在空中，指尖微微顫抖著，安向晚卻迎著她的目光，將她牽起，走到隔壁房間，嘴上卻說，「雨燐這人看上去不講理，但心裡自有計較，不會白白佔了褚守便宜，你放心罷。」
+
+亦暖亦步亦趨的被人拉著走，瞳孔劇烈晃動，不是…那她呢？這安向晚可會藉機強佔了她便宜？
+
+房門闔上，安向晚走入內室，燃上燈火，她將行囊掛在架上，背對著門口，也不管房中還有他人，便自顧自地將外衫解開，衣衫輕落。安向晚指尖一頓，好一陣子沒聽見動靜，她回頭一瞥，亦暖侷促的站在門口，寸步未移。
+
+安向晚看著她，好笑道，「我們都是女子，我身上有的，你也有，你這般緊張做甚麼？」
+
+面前女子衣衫不整，有礙風俗，亦暖不適應地別開臉，「女子又如何？有些事該當做，有些事不該當做，難道安姑娘不知曉麼？」
+
+「呵。」似是調侃，安向晚轉回身，從行囊取出衣服，換上。待她穿戴好，款步而來，亦暖這才把視線放回她身上。
+
+安向晚身著一件墨黑色衣衫，樣式熟悉，與街邊那些個鬼差身上一個模樣。亦暖眉頭一蹙，「你幹嘛穿褚守的衣服…」
+
+「看出來了？」安向晚噙著笑意，擺了擺身姿，「我總覺著這套衣服有些小…」
+
+說著，她指尖輕輕按了按胸口，「你瞧，這兒就有些包不住。」
+
+順著動作，亦暖視線不自覺的跟著下移，落在了安向晚的衣口上，那裡，許是布料剪裁的太短了，女人姣好的陰柔曲線被突顯出來。
+
+明明同為女子，但亦暖這般赤裸裸的盯著人家看，不免感到一陣燥熱，她頰上羞澀的泛起微紅，旋即轉開臉，「褚守還只是個孩子，你穿孩子的衣服，覺著小件不也正常？」
+
+「褚守身子高，我還以為這衣服能合身…」安向晚佯裝可惜的嘆了一聲，似想到甚麼，語氣一轉，賊兮兮道，「這鬼差衣服不好取得，機會難得，你要不要也穿穿看？指不定，這套衣衫，你會比我合身些…」
+
+聞言，亦暖警惕看回來，見安向晚一副心懷不軌的模樣，老盯著她胸前看…
+
+亦暖反應過來，她雙手一抱，摀住胸前姿色，一張臉被逼得又羞又急，「安向晚，你下流！」
+
+「哈，開個玩笑而已，別那麼嚴肅呀。」安向晚笑著，直起了身，她收拾起玩心，正色道，「此行，我們需要一個身份，才好掩人耳目，而雨燐褚守那邊，若是能夠以玉身攜帶著，我們這一路會走得更平順些。」
+
+亦暖望著她，安向晚從懷裡取出一塊半式的面具，她持著面具，指骨纖細分明，肌膚白皙，可見手背上的淡青色脈絡。
+
+雙指往內推入，緊闔卡榫，發出細微的咬合聲，安向晚左右晃了晃腦袋，確定面具不會落下後，這才放下手，抬眼去看，亦暖似乎走了神，神色有些癡。
+
+安向晚在她眼前揮了揮手，亦暖才回神，安向晚笑道，「我準備好了，我們去看看雨燐她們如何了。」
+
+「哦…哦！」亦暖就站在門口，她原地轉了個圈，開門踏了出去。安向晚帶上行囊，跟著出了房門。
+
+這個時間入宿的客人不多，走廊上少有人經過，安向晚這身打扮，在鬼界很尋常，若是不注意看，不會被人較出差異。
+
+敲響房門，雨燐急躁的聲音傳了出來，「嘖，你怎麼這麼笨拙啊？害！…來了來了！」
+
+門開了，雨燐面色不好看的掃了一眼門外，安向晚穿著鬼差的衣服，又戴著面具，雨燐一時看差了眼，險些破口大罵趕人，要不是瞥見了一旁的亦暖，才又意識到這個鬼差模樣的人，就是安向晚。
+
+「我還納悶著，你急匆匆的要我找客棧，是要做何？原來是想找個隱蔽的地方喬裝打扮。」雨燐側了身，二人相繼進屋。那邊褚守頹喪著腦袋，她不得要領，受了挨罵，很是挫敗。
+
+安向晚走過去，拍了拍她的肩膀，溫聲道，「雨燐說話直接，有時是不大好聽，但她人不壞，出發點也是盼著你好的，你莫要將那些重話往心裡去。」
+
+褚守不語，只悶悶的點了點腦袋。
+
+亦暖站到安向晚身側，小聲問她，「褚守這般模樣，許是受了不少打擊，你可有甚麼要領，能夠傳授她？」
+
+安向晚想了想，「寄宿玉身，主體為玉，若是要回歸玉內，勢必得要有個令自己心安的所在，這通常…取決於持玉者。」
+
+「持玉者？」亦暖呢喃一聲。
+
+安向晚讓褚守把玉交出來，塞到亦暖手上，「你再試試。」
+
+褚守喪著臉，卻還是聽話的闔上了眼睛，許是因著信任亦暖，這回她放心的回到了玉內，身形消散，化作一縷輕煙，流進了白玉中。
+
+寄宿了魂魄的玉，有了燙手的溫度，亦暖指腹揉了揉白玉，側頭去問，「褚守這樣算是成了麼？」
+
+「嗯。」安向晚頷首，「我和雨燐，與你們羈絆不深，褚守心中有芥蒂也是正常，你是她熟識之人，她也放心待在你手上。」</code></pre>
+				<p id="6c538e87-c8b8-4037-8c05-9bc3c52a2840" class="">
+				</p>
+			</div>
+
+
+			<h2 id=four>#32 萬鬼潛行夜遊園 4</h2>
+			<div class="page-body">
+				<pre><code class="language-Go" style="white-space:pre-wrap;word-break:break-all">悄聲出了客棧，雨燐與褚守藏於玉身內，被安向晚和亦暖帶著走。
+
+安向晚一身鬼差裝扮，她輕功極好，步伐輕淺，落步無聲。亦暖視線緊盯著她，生怕一走神，就會被落下。
+
+城中熱鬧，卻不乏許多幽森暗巷，安向晚儘量挑了人煙多的街道走，但難免會經過一些暗巷，安向晚悄悄回頭去看，亦暖離她並不遠，卻總是走在邊上，她停了腳步，亦暖隨即也停下了。
+
+「怎麼了？」
+
+「你可以與我走得近一些。」
+
+這話沒有頭緒，亦暖茫然看著她。
+
+安向晚依著她的視線，又說，「暗巷裡頭藏著許多身份不明的孤魂野鬼，走得太靠近，恐會被祂們捉去，作那替死鬼。」
+
+聞言，亦暖神色一凜，幾乎是彈射般，往安向晚身側靠近，「你怎麼不早說。」
+
+「人多的地方，倒是還好。」說著，又提步往前走。
+
+街邊景致越漸森幽，許是要見的人權威顯赫，附近便少有商家民宅。
+
+天色昏暗，還在老遠便見一道火光浮沉，再往前的每一步，皆有寒氣襲來，亦暖忍不住哆嗦，那份不自在的感覺，令她想去拉停安向晚。前方安向晚似有所覺，她側過半身，掃了一眼，放低語氣，「沉住氣，這段路不好走，你是生人，更要當心些，莫要被這死氣浸染了。」
+
+亦暖咬了咬牙關，點了點頭，「我還撐得住，我們趕緊過去罷。」
+
+又前行了數步，許是強撐到了極限，亦暖身形一晃，半膝跪倒在地，安向晚聞聲回頭，「還能動彈麼？」
+
+亦暖垂著頭，不做反應。
+
+「唉…」安向晚來到她跟前，蹲下來，扶起她的雙頰，亦暖雙目空洞，唇色淺白，尚在發顫，已然失去了神智。
+
+這段路已經行了大半，若要再打道回府，那是不可能的。安向晚一手攬過她的腰支撐著她，朝著光火處前進。
+
+近了，門衛提燈將人攔下，「何人？」
+
+安向晚從懷裡掏出一顆琉璃色的珠子，呈在手上，「安生。」
+
+「安生…？」門衛起疑的打量著她，忽地，眸中閃過一絲幽綠，又退散，「安掌櫃，你這副裝扮倒是少見，她呢？區區凡人怎會跑來此處溜達？」
+
+「殿下要的物件，是她尋獲的，她功不可沒，而我不想邀功，便將人擄來了。」
+
+「哈，膽敢跟鬼界做生意，這姑娘也是好氣魄。」門衛側了身，放行二人，安向晚走過他，門衛又說，「大王那邊來了人，尚在府中，似是來查明殿下手邊的珍寶，你若是碰見了他們，可要當心些。」
+
+「我曉得了，多謝你。」
+
+過了大門，門衛手上提燈一正，伴隨著清脆的銅鈴聲，門應聲闔上。安向晚回頭去看，幽森的鬼氣被阻絕在外，她低頭去輕喚亦暖，不過幾聲，亦暖突然打了個哆嗦，人才終於轉醒。
+
+鬼宅裡依舊陰冷詭譎，安向晚沒打算久留，亦暖非是鬼界人，耽誤久了，怕是會對她造成影響。
+
+「還好麼？若是支撐不住，便在此等我歸來，我會盡量快些。」
+
+亦暖面色蒼白，但她搖了搖頭，「我不要緊，方才，多謝你。僅憑我一人之力，難走那條鬼道…」
+
+安向晚詫異道，「你曉得那條路？」
+
+亦暖斂下眉色，「曾前，褚守帶我走過類似的地方。鬼道裡寒氣逼人，生人難受，而持浮燈者更是會以鈴鐺聲擾人，讓一些不知輕重的鬼民們失去判斷力，進而迴避。」
+
+二人直起身，安向晚向著前路，宅邸地大寬闊，建築上卻不見燈火，宛若鬼樓，在她們二人面前的，是一座八尺高的大門，安向晚提步向前，亦暖慢她一個步伐，跟隨在後。
+
+「這門後暗藏玄機，你我不要走得太遠，當心被拆散了。」安向晚說著，感覺亦暖朝她貼近，她才緩緩將門推開。
+
+門後景色惹得亦暖雙目一亮，二人尚在門外，卻見裡面汪洋一片，其中有條矗立在水面上的橋，蜿蜒地，朝著她們這處延伸而來，而在那另一端處，連接著一座座落於水面上的涼亭。
+
+向前走了幾步，身後的大門突然消失了，亦暖幾乎是同時察覺到，她緊張的扯了扯安向晚的袖子，低聲道，「門不見了。」
+
+安向晚不為所動，警戒著前路，「莫慌，這只是虛境。有時，會有些個不速之客來訪此地，那些不受待見者，便會被困頓其中，直到尋得逃脫之法。」
+
+「那…」亦暖還要問，遠處便有銀光閃爍而來，速度極快，不過眨眼之際，便以來到她們面門。但安向晚出手更快，她雙袖一震，銀鏢射出，將將打在那些飛來的銳器上。
+
+銀鏢牽連著細線，安向晚反手一拉，正要將銀鏢收回時，卻不想，那邊又閃過一瞬亮光，安向晚還要再迎擊，卻是反應不及，眼見寒光一閃，劃斷了細線，銀鏢一時失重，掉落在地，而那尖銳兵器已達安向晚面門，就要劃過她…
+
+就在這千鈞一髮之際，一道殘影晃過，一隻略顯粗壯的手臂橫在了安向晚的面前。再往前看去，那雙不合乎常人手臂的前肢，幻出獸爪，握住了飛來的銳器。
+
+亦暖警惕前方，無暇看她，只是嘴上問道，「怎麼好端端的，就有人要取我們性命？」
+
+遠方涼亭處似有黑影竄出，踏著橋墩，運著輕功而來，未看清，先聞聲，「楚玹說來了熟客，我還當是哪路不長眼的小鬼差呢，沒想到，竟是你們。」
+
+一抹紅影落下，那人眼部被黑色綢緞掩去。這個人她們識得，是在那無望冥海下，被困頓於七角水晶所創造的深淵中，那隻帶著極重怨氣的重明鳥。
+
+「聽聞府中尚有貴客，殿下將我們引來此處，可是不願見我們麼？」安向晚問。
+
+重明鳥輕笑一聲，「甚麼貴客，不過是些煩人的傢伙罷了，楚玹才不願意和他們廢話。喏，就在那涼亭下，她呀，等你多時了。」
+
+有重明鳥帶路，那些憑空而來的暗器不再出現，安向晚將落下的銀鏢撿回，亦暖褪去獸爪，三人來到亭中，鬼王么女楚玹著一襲白裝，她抬眼掃了掃安向晚，噙著笑意道，「安掌櫃，這回我們的交易，怕是不成了。」
+
+安向晚抿了抿唇，從懷裡取出玉面鬼娃上繳，楚玹看了看東西，讓重明鳥接過手，仔細收好，這才又揚著不懷好意的笑容，打趣著安向晚道，「前邊打燈的小哥與你交情匪淺，想來都與你言說了罷，我這府上近日被鬧得雞犬不寧，可都是拜你所賜。」
+
+這話沒頭沒尾的，亦暖又是一個局外人，一時也插不上話，只能靜默的立在一旁，左右望著二人對談。重明鳥也是勾著唇，不怕事大似地，在一旁看戲精彩。
+
+「玉面鬼娃不好尋獲，這其中多有干擾，既然殿下已經派人前往尋回，又何故讓我與鬼界的人，再起衝突？殿下心思難測，我也是為求保命，才會出此下策。」
+
+楚玹冷笑一聲，「你是甚麼身份，我難道還不明白？我命你去尋這玉面鬼娃，自然是我的意思，至於你說得那些，我不清楚。重明。」
+
+重明鳥向前，單膝跪在楚玹跟前，她垂首，模樣依順。
+
+「安掌櫃去了那無望冥海探求真相，可找著了想要的答案？」
+
+濃稠的夜色包圍著涼亭下，朦朧的天色，難見明月，原本清澈的水面也越發幽漆陰森，好似那水面下藏有異獸，正蠢蠢欲動。
+
+「我已然依言上繳玉面鬼娃。」安向晚說著，又從行囊裡取出一布袋子，那裡面裝著破碎的幻象鏡，「至多是我理虧，但這筆交易不能作罷，你還想要甚麼條件？」
+
+「你替我尋回了重明，這誤打誤撞，也算是將功贖罪了。先前，重明不知我倆之間的利害關係，反倒是讓你賺了一回人情債，但我也不是那般計較的人，安掌櫃想來也是個大器的人，這筆交易我也還想繼續做下去，就不知安掌櫃今日帶了個人來，欲意為何？」
+
+楚玹將目光落到了亦暖身上，安向晚正色道，「既是要談生意，總不能空手而來。」
+
+「哈，好呀…好得很！」楚玹端正起坐姿，朝二人招呼入座，「那我便再賣個人情於你，不過，我有個條件。」
+
+安向晚和亦暖相視一眼，才對楚玹點頭道，「願聞其詳。」
+
+楚玹說，「玉面鬼娃裡封藏了某個鬼差的一魂一魄，我與他先前有些交集，有些事需得當面問個清楚，只是先前重明與我賭氣，不肯告訴我讓玉還魂的辦法。」
+
+重明鳥跪在楚玹腳邊，頭不自覺的往下潛了幾分，就似個做錯事的孩子。
+
+「如今，我得了解法，尚還需要一樣媒介。」
+
+玉面鬼娃裡究竟封了誰的魂魄，安、亦二人也相當好奇，亦暖側頭去看安向晚，發現這安向晚竟直勾勾的盯著楚玹，眼底情緒充滿渴望，她說，「還需要甚麼物甚做媒介？」
+
+「是鬼差的靈丹。」
+
+此話一出，空間頓時陷入一陣沉靜。
+
+「害人的事情，我們做不來，還望殿下換個條件。」亦暖咬緊了後牙，握緊拳頭道。
+
+安向晚卻持不同意見，「殿下曉得鬼界規矩，這鬼差靈丹並不好取得，若是不慎引起騷動，殿下怕是又得不得清閒了。」
+
+「我自然不會讓你們鋌而走險。」楚玹揚起下顎，好笑的看著亦暖，這人一板一眼，較真的實是可愛，「你們來得巧，三日後便是七月半，城中有個大日子，鬼王會行特赦，將一些故去的鬼差靈丹釋放出來，供給鬼界人奪取，得者，便是在鬼界裡百無禁忌，如同鬼差那般，在三方兩界中來去自如。」
+
+「我稍人打探過了，今年鬼王將釋出兩顆靈丹，供鬼界人爭奪。我需要你們前去，替我爭一顆靈丹回來。事成後，你們要的答案，我知無不言。」
+
+二人雙雙站起身，安向晚朝楚玹拱手道，「安生定不負殿下所望。」
+
+楚玹擺了擺手，「至於這幻象鏡…，如今沒了幻象鏡做掩護，你在這鬼界裡行走，自當多加小心些，若是不慎出了事，我可擔保不了你。」
+
+安向晚頷首，「我明白。」說著，似是又想起甚麼，將一顆琉璃色珠子從懷裡取出，要上繳，但楚玹卻不收。
+
+「如今幻象鏡沒了，這珠子也不過是個無用之物，你便留著，當作是我們之間的信物罷。」楚玹側了身，似是感到乏了，揚了揚手，讓重明鳥送客。
+
+重明鳥聽命，將二人送至涼亭外，三人走了一段路，重明鳥才說，「三日後的大典，還望二位當心些。」
+
+二人回身，重明鳥目光膠著在安向晚身上，安向晚身份特殊，不受鬼界待見，若是要參與鬼界的大節日，難免引起旁人注意。亦暖橫身擋去了重明鳥的視線，有些不耐道，「我也不是吃素的，旁人若是要取她性命，也非是那般容易。」
+
+重明鳥笑了笑，不再言語。二人轉身離去，直至橋頭，大門顯現，雙雙踏出虛境，回到了市井中。
+
+與來路時不同，虛境向外的連接處已不在那鬼樓前，二人摸索一陣，找回原路，返回客棧內。
+
+房間內，兩枚雙生玉靜立在桌面上，四個女子齊聚一處，面色凝重，先前的對話，雨燐和褚守都聽見了。
+
+雨燐說，「靈丹難得現世。我們非是鬼界人，對鬼界規矩並不熟悉，不好招搖於市，而這城中暗巷又不得去，大典那日，我們可該在何處潛伏才好？」
+
+安向晚抱臂站在一旁，亦暖在她對案，一雙眼睛左右打量，最後又看回安向晚身上。
+
+褚守取來了紙筆，筆墨點在方紙上。她對鬼界大城還算熟悉，幾筆落下，點出幾處暗處，她說，「這裡雖是暗巷，但也是鬼差間習慣行走的道路，那幫孤魂野鬼不敢在此造次，我們能在大典前，潛伏於此，待萬鬼潛行時，我們便在出去討個熱鬧，屆時，市井裡吵雜，想來，也不會再有人特意注意到我們。」
+
+褚守畫好地圖，招呼幾個人看過來，安向晚垂眸掃了一眼，用指腹輕敲桌面，三人隨即朝她看去，她壓著音量道，「鬼王釋出的靈丹有二，雨燐亦暖一組去城南這處蟄伏，而我和褚守分別去城東和城西，若是有人早我們一步得手，我們便將他驅趕至城南，到時我們四人合力，再將他一舉拿下。」
+
+安向晚一邊說，褚守跟著在地圖上添上幾個能潛藏的暗處，亦暖看著被標記上的符號，蹙眉道，「若是靈丹被人得手後，那人走往城北，我們又該如何？」
+
+安向晚說，「楚玹雖是與我們交易，但也非是完全沒有作為。城北離她鬼樓近，想來會安插重明鳥駐守在那，再者，鬼樓周圍潛伏許多重兵，尋常鬼民不敢貿然往那處前去。」
+
+褚守點頭，「確實，城北在素日裡非是鬼民間不敢隨意踏足，就連我們這些地位甚低的鬼差，也不會想要靠近。那裡多是權威高重的鬼差聚集，鬼差間雖是各執其職，互不干涉，但是也不乏有黑吃黑的情況出現。」
+
+「黑吃黑？」雨燐訝然一聲，「你們鬼差不是效命於鬼王之下麼，怎地還要拉幫結派的？」
+
+褚守沉下眸光，陰鬱道，「我原本也只是聽說，不願相信會有這種事情發生。可那時我們在無望冥海下，七角水晶處時，我親眼看見了，那些以虛影出現的鬼差，一個個都沒了靈丹，他們是被…是被…」
+
+雨燐又說，「指不定是七角水晶弄出的幻象呢，不是真的？」
+
+褚守還是悶著聲，「不可能的，那些人定是存在過的，我們每個鬼差身上除了具有靈丹之外，還有任職時分配的專屬鬼器…」她說著，掌心輕輕拍了拍自己腰間的拐刀，「每位鬼差都有專屬，靈丹若是命，鬼器則是證明，這東西…七角水晶可捏造不來。」
+
+「專屬武器…我怎麼聞所未聞。」雨燐呢喃一聲，側頭去看安向晚。只見安向晚擰著眉，似乎也在思索甚麼。
+
+幾個人各自確認好自己潛藏的位置後，褚守將地圖燒毀，各自離房歇息。按慣例，雨燐拉走了褚守，亦暖窘迫的留了下來。
+
+房中就只一張床，安向晚沒打算過去，只挑了個凳子坐在桌前。
+
+「盤纏不夠，只能委屈你同我一室了。」安向晚指了指後面床鋪，「床讓給你睡，我就在這歇著。」
+
+亦暖抿了抿唇，朝她走近，「安姑娘，其實我也是可以和褚守一間房，你和雨姑娘同寢…睡得也會安心些罷？」
+
+安向晚笑道，「怎麼你這回，倒是這麼寬心了？你就不怕，我同雨燐在一起，屆時夜裡跑路，你要追都追不成。」
+
+亦暖，「…。」也是，安向晚這個人狡猾，時刻都不能讓人鬆懈。可是在幾日的相處下，潛移默化，她也不是不相信安向晚的為人，就是…就是…她與她單獨相處時，總會有些彆扭，尤其是在這種時候。安向晚的眼神總是不帶好意的往她身上覷。
+
+安向晚適時收回視線，輕飄飄吐了一句，「你若是不喜和我一起，我也能讓雨燐過來，我則去隔壁睡。」
+
+讓雨燐過來？那還得了！
+
+亦暖咬了咬下唇，「你還是留下吧，雨燐對我心有芥蒂，我與她相處，只怕會是更彆扭…」亦暖死了心，走到床鋪前，路過安向晚時，她聽見身後傳來一抹輕淺的笑聲。</code></pre>
+				<p id="6c538e87-c8b8-4037-8c05-9bc3c52a2840" class="">
+				</p>
+			</div>
+
+
+			<h2 id=five>#33 萬鬼潛行夜遊園 5</h2>
+			<div class="page-body">
+				<pre><code class="language-Go" style="white-space:pre-wrap;word-break:break-all">鬼界大典將至，城中市井越漸熱鬧，客棧裡的客房都滿了人，原先左右空下的房間，被吵雜的過路客租了去，安向晚推開窗扇，探頭往街口去看，灰濛天空下，來來去去的，一個個皆是身著黑衣，戴著面罩的鬼差。
+
+她將窗戶半掩起來，走回室內。亦暖整理好衣衫，從屏風後探出頭來，安向晚與她相視，開口道，「時辰差不多了，雨燐她們該是也準備妥當了。」
+
+亦暖隨著她的腳步來到房門口，安向晚推開房門，亦暖在她身畔小聲道，「安姑娘，萬事小心。」
+
+出了客棧，四人在約定好的暗巷碰頭，無人知曉鬼王會在何處釋放靈丹，城中四處皆有鬼差駐守，暗巷外有三兩鬼民聚集，商討著如何聯手奪丹。雨燐和亦暖一路，二人早早便往城南行去，安向晚抱臂立在暗巷口，這裡是城東，褚守就被安排在這處待命，時間還有許多，二人便也不著急。
+
+幾日下來，安向晚都是一身鬼差裝扮，褚守又不瞎，早就看出來安向晚穿得這身，就是從她身上奪去的，只是如今褚守喪職，這套衣衫於她，形同虛設。但怎麼說也曾是自己的物件，看久了也還是會覺著彆扭，且還是日日如此…
+
+褚守不好在暗巷裡喊人，只能悄悄地拉了拉對方衣袖，安向晚回眸一看，滿目疑惑，褚守說，「安姑娘，我還不知曉你何故要扮作鬼差…」鬼差間自有法眼，如若認真去看，便能洞悉出身份，安向晚這樣子的作為，不過是騙騙那些外行人。
+
+「我不喜在外惹麻煩，若是有個身份作遮掩，便能掩去一二禍事。一來，若是不慎遇險，我這身行頭能夠混淆視聽，爭取給同伴逃脫的機會，二來，對方就算將我捉拿住了，我非是鬼差也非是鬼界人，他也難定其罪。」
+
+「那前提是碰著了小鬼差，若是職位大些的，指不定就把你送去見鬼王了…」褚守又說。
+
+安向晚微微一笑，面罩下眼睫彎彎，「想要捉到我，也要他能有這個本事。」說著，安向晚轉過身面對褚守，指了指她身上的拐刀，「日前，你說鬼差身上皆有專屬鬼器，我方才觀察了一陣，瞧見街上那幫鬼差間，確實如此，要不是腰間佩劍，就是背上棍棒的，樣式獨一，皆有不同。」
+
+褚守會意過來，將自己腰間拐刀取下，要交給安向晚，「我明白作戲就得做足。安姑娘，我將拐刀借予你，此物非凡，你定要好生保管。」
+
+拐刀有二，安向晚只取了一只，另隻給褚守留下了，她說，「我使不慣這種武器，你且留著一只防身罷。」
+
+「害，不打緊，你且拿去，掛身上也好，莫要讓人瞧出破綻了！」褚守說得乾脆，不等安向晚再婉拒，就先過來替安向晚將拐刀繫在腰間，兩把未出鋒的拐棍置於身側，走起路來，怪威風的。
+
+天色又暗下幾分，褚守抬眼望向空中，灰濛的雲霧中似有東西浮動，褚守瞇了瞇眼，瞬時端起正色，「時候差不多了，安姑娘，我等你消息。」
+
+安向晚也看了看空中，再回首時，褚守已經隱沒進暗巷內，不見其影。她提步踏出暗巷，走入市井，朝著城西行，一路上行過許多鬼差，有些鬼差不經意地看了她一眼，但似乎沒有發覺出她的不同。安向晚低調行路，行步時輕淺無聲，莫說驚動鬼差，就連擦肩時的鬼民，都不甚察覺。
+
+才到城西處，空中閃爍異象，安向晚仰頭去看，伴隨著昏暗夜色，天上浮著兩枚琉璃色的靈丹，緊接著，有人朝著天際處使了一擊招式，只見流光刺眼的打在靈丹上，兩枚靈丹騰空至最高點，朝著不同方向疾射出去。
+
+安向晚目不轉睛，她縱身躍上樓房，朝著離自己近些的靈丹追了過去。
+
+而在她出了暗道後，一抹身影閃現而過，追在她身後，漸行漸遠。
+
+靈丹顯出後不久，城中爆發出纏鬥聲，位在城南的亦暖和雨燐，估摸著時間，伸長脖子，朝著東西兩面的方向注視，等了近一刻鐘的時間，才遠遠的聽見褚守的喊聲，由遠及近，「亦暖！雨姑娘！追…快追他，那小鬼頭，要躲進平房裡啦！」
+
+尚在老遠，就見一抹身影，靈活的蹦蹦跳跳，從巷子口鑽到巷子尾，把死巷挺成了活巷，一路跌跌撞撞，撞倒了街邊幾個攤販，踩破路旁好些個民房屋頂，還扯走了架在屋簷上的布帛，把自己弄得狼狽，活像個鼠輩。
+
+目標明顯，雨燐一手抖出花扇，踩著輕功而下，阻絕了那小鬼頭的去路。不曾想會有人從天而降，小鬼頭嚇得不輕，正要往後尋找退路時，才回身，亦暖正好落地，一只利爪抵向他頸間，亦暖笑意深沉。
+
+褚守追了一路，氣喘吁吁的，但她不敢大意，一邊阻絕周圍跟上來的人，一邊破口大喊，「莫要輕敵，那小鬼頭可狡猾了，一不留神就沒個影！」
+
+那邊呼聲才落下，小鬼頭抓緊二人分神的時機，身子一橫，先是一個側翻，閃身進死巷，而後雙腿抵牆使力，朝著街邊樓房的屋簷上抓，不過眨眼間，就讓他逃去了。
+
+但論及速度，亦暖身有邪物附體，在獸型顯現下，敏捷如猛獸，她瞳孔變得纖細，散出一抹綠光，雨燐還尚未發話，便見亦暖已經躍出老遠，朝著那小鬼頭追了出去。
+
+雨燐隨即跟上，褚守人都還沒到，就見那二人又跑遠，她喘著粗氣，一拍腦門，重重歎息好大一聲，才又提起氣，趕在二人之後，追上去。
+
+不知是何處的民房，屋頂破了好大一個坑洞，亦暖雙目緊盯那小鬼頭，她口中溢出熱氣，只覺身體異常滾燙難耐，這熱氣難散，令她浮動暴躁。
+
+小鬼頭沒想到這人追得這般緊，他腳步微縮，還想再逃，那邊亦暖眼尖，身形一揚，宛如猛豹，朝小鬼頭頂上壓去。小鬼頭哪裡遇過這麼兇猛的女子，他已經無處可逃，唯有壓低身形，抱頭躲避…
+
+小鬼頭被嚇得泣不成聲，瑟瑟發抖，手裡的靈丹也握不好了，在他蹲下的同時，滑落地面，沿著木紋，滾到了亦暖腳邊。
+
+亦暖放下了動作，傾身拾起靈丹，也不顧那小鬼頭情緒，調頭就走。
+
+當雨燐、褚守追過來時，小鬼頭依舊癱坐在地，哭喪著臉，淚痕乾了又濕，濕了又乾，似是受了不少衝擊。
+
+四周已無亦暖蹤跡，二人相互對看一眼，接連來到那小鬼頭跟前，豎著眉梢問道，「追趕你的那個女子呢？」
+
+「她…她取走了靈丹後，就…就走了，我也…不曉得呀。東西都已經不在我手上了，你們就…放過我罷。」小鬼頭蜷縮起身子，畏懼得不得了。
+
+走出民房，二人也不曉得要留在城南還是趕往城西去，眼下亦暖不知去向，雨燐一時拿不定主意，唯有重歎一聲。褚守見她為難，不禁提議道，「不若雨姑娘留在城南罷，我前去城西一探究竟。若是我不慎與安姑娘擦身而過，城南也還有雨姑娘在此接應，反之，如若安姑娘在城西對應不來，我也曉得城中幾處能藏身的暗巷，好從後助她一臂之力。」
+
+雨燐別無他法，只能應允，「好罷。」
+
+二人分開行動，褚守不敢怠慢，動身前往，她身影一晃，隱沒在墨色下，雨燐則是回到了城南處，原先約定好的地點，潛伏於暗巷中，伺機而動。
+
+被擊浮上天的靈丹如流光驟現，不待安向晚去爭取，街景上便有鬼民爭先恐後的去捉那琉璃珠子，安向晚見靈丹落入人群中，腳步趨緩，打算靜觀其變。
+
+安向晚佇立在樓房的屋簷上，她微微側了身，警戒的朝後望了一眼，目光所及處，並無異狀。她沉下眸光，轉身朝街頭一躍而下。而在她身影墜落後，一抹黑影才顯出，又緊追其後，滑進了暗巷裡。
+
+坊間鬼民爭奪激烈，幾個輪迴後，靈丹落入一武藝過人的鬼民手中，他攜著靈丹潛行逃竄。安向晚潛伏暗處時便緊盯著他，見他得手後，隨即動身追了上去。
+
+那鬼民身手不差，行走無聲，前世許是個逍遙武林的俠士，可奈何他手邊沒有神兵利器，僅憑拳腳武功，要在鬼界混，還是略顯下風。安向晚早在城西幾處設下天羅地網，鬼民甩開身後追兵，閃身躲進一處暗道，安向晚踏著矮牆，輕點腳尖，飛身中，她雙袖一震，袖口下指尖靈活擺動，旋後，緊捏握拳。腳尚未沾上實地，便聽見前方的暗道裡，發出一聲淒厲喊聲。
+
+暗道內，那鬼民中了她的陷計，受天罡絲折磨，又因掙扎得厲害，身體多處破損，鬼民不比鬼差，又非是肉體凡身，早已無血無肉，他受了傷，傷處沒有血水流淌，而是現出一縷煙絲，圍繞在他周身。
+
+安向晚才踏穩腳步，尚在拐口矮牆上，她身側半身，抬眼一看，見在對角處的牆面上，也佇立著一道身影。她眸光微沉，要再運起輕功去追，已然來不及，只得動用手中絲線作餌，為其爭取時間，不讓靈丹落入他人之手。
+
+那身影行如鬼魅，欲要去捉拿鬼民手裡的靈丹，此時鬼民已經被天罡絲所縛，動彈不得，手中那顆靈丹，被他高高揚起，呈在掌中。黑影將至，安向晚捏緊指尖，揚手朝地急遽劃過，幾乎是同時，那邊發出一聲慘烈哀嚎，哀嚎聲未落，安向晚點起輕功，落進暗道裡。
+
+四周密佈銀絲，鬼民如同被蜘蛛盯上的獵物，束縛於密絲間，安向晚走近時，黑影就佇立在她對面不遠處，而她的腳邊有一斷臂，那殘軀邊，滾落一顆琉璃色靈丹。安向晚垂眸，將它拾取，那邊黑影卻說，「鬼界自有鬼界的規矩，姑娘非是鬼界人，何故要傷及這無辜鬼民性命？」
+
+安向晚握住那靈丹，尚未直起身，那邊黑影有了動作，她眼角餘光瞥見一抹寒光襲來，安向晚顧不得站穩身子，只能狼狽的朝一旁翻滾躲避。黑影緊隨而至，勾起五指朝她襲來，安向晚掌心發力，一連滾了幾圈，地面上留下點點坑洞痕跡。
+
+那人面上戴著半式鬼面，一身黑袍，背上原先掛著的大刀被他擲射出去，現在他追到安向晚這處，沒能將人拿下，便轉身去取回大刀。
+
+待安向晚起身時，那鬼差已經提著大刀，朝她攻來。
+
+這名鬼差擅於近戰肉搏，安向晚閃躲匆忙，身上幾處接連掛彩，她咬了咬後牙，步伐越顯慌亂，她回眸一瞥，身後石牆高立，儼然已再無退路。
+
+鬼差持著大刀抵著她面門，墨黑色的瞳仁散出一抹幽綠，他動用法眼，窺探出安向晚掩藏的身份，「我本還納悶著，你這身上的鬼器我見著眼熟，沒想到，還真是你竊盜而來的。」
+
+安向晚緊盯著他，那人又說，「當年的孩子長大了，卻不改記性，鬼界非是你這等閒之輩，能夠恣意出入的地方。」
+
+那人才說完話，安向晚瞳孔劇烈縮放，她指骨捏得慘白，憤恨的盯著他。鬼差間自有專屬鬼器，這把大刀化成灰，安向晚都識得的，當年她在荒郊間，就是這個鬼差尾隨其後，趁著她身旁無人照應，對她痛下殺手。
+
+當時，她的命，就是交代在那處，交代在這個人的手上…
+
+「既是你難得撿回來的命，我也不是這麼不近人情的。倘若你把靈丹交出來，我便饒你一死，就當今夜不曾見過你這個人。」鬼差收起了刀，走近幾步，將手遞到了安向晚面前。
+
+他露出一抹得逞的笑意，「如何？」
+
+眼下情況不容安向晚做抉擇，她捏了捏手中靈丹，在鬼差的注視下，朝空中拋去，「你若想要，那便去撿吧。」
+
+鬼差意不在她，見靈丹被拋出後，他隨即旋身追去，安向晚得了空檔，翻身踩上石牆，立於高處，探尋靈丹去向。卻不想，就在她方才扔出靈丹的時候，電光石火間，那邊竟出了變數，一道黑影如疾風而至，早鬼差一步，伸手握住了靈丹！
+
+等等，不對！
+
+安向晚抹眼一看，那人握住靈丹後，周身卻散出了粉末…
+
+粉末似作輕煙般壟罩在那半途殺出來的程咬金身上，但煙幕散去，安向晚才看清來人。
+
+朦朧月色下，那人緩緩站直身姿，她手上捏碎的動作未放下，她旋了半身，朝著安向晚的方向望去，二人視線匯聚，安向晚心下猛地一緊，彷彿心臟都要漏了半拍。
+
+她…亦暖怎麼會突然出現在這裡？</code></pre>
+				<p id="6c538e87-c8b8-4037-8c05-9bc3c52a2840" class="">
+				</p>
+			</div>
+
+
+			<h2 id=six>#34 萬鬼潛行夜遊園 6</h2>
+			<div class="page-body">
+				<pre><code class="language-Go" style="white-space:pre-wrap;word-break:break-all">見被人搶先一步，鬼差心緒大變，他刀鋒一轉，將寒光對著那不速之客，似蓄力般，側旋過半身，眼看就要朝著那抹身影砍下。
+
+安向晚已來不及做掩護，只得驚呼一聲，「亦暖當心！」
+
+邪物半顯，干擾著亦暖心智，她收回目光，朝著襲向自己面門的大刀瞥去，鬼差那狠絕的神情，逐漸放大，幾近要貼上她的眼睫。
+
+在亦暖眼中，一切動作就像放慢了數倍，遲緩地令人感到煩悶焦躁，她口中微微吐出熱氣，腳步後踏、旋開，那大刀貼著她的身形，驚險滑過，卻未傷她分毫。
+
+鬼差隨時反應過來，他按住刀柄，腹部發力，靠著一身勁力，動作不曾間斷，回身後，朝著亦暖舞動大刀。亦暖身手矯捷靈活，似隻滑水的魚，大刀迎面揮來，彷彿僅是淺淺破過水面，盪出一道漣漪，底下魚兒從容游開，勁力消退，水下一片安好。
+
+安向晚在後不敢鬆懈，她緩過氣後，雙袖朝外推送，以天罡絲作結縛網，再展纖指時，五指間皆握著象白色小鏢。依著遠處二人正纏鬥著，她隱匿聲息，悄聲接近。
+
+鬼差攻擊不奏效，越打越煩躁，「區區人類，怎會有如此功力…！」
+
+眼前人卻遊刃有餘地，回眸掃了他一眼，嘴角滑開一抹邪笑，「是你，太慢了…」
+
+二人在夜色裡追逐，亦暖一襲白衫實在顯眼，加之後頭又有鬼差追趕，不過片刻，就惹來城中議論，雖然此時尚在大典當中，城中本就紛亂，但鬼差無故追人之事，還是相當少見，很快地，在城中待命的鬼差便察覺出異狀，要來支援。
+
+這時，安向晚已尋到一高處，掌握四周動向，見著亦暖周圍潛藏諸多鬼差，若是戰況持續膠著，恐對她們不利。
+
+亦暖移動速度之快，鬼差追趕不及她，便放慢速度在後跟著，就在方才，他以察覺到城中同僚動向，有了援軍，豈會擔心拿不下這傢伙？
+
+身影靈巧劃過夜空，暗巷處忽有寒風拂來，亦暖微微蹙眉，分神朝下去看，一道閃光從她身下竄過，不偏不倚的打在了從巷子口內投射出來的暗器，而她再去細看那巷子，巷子裡已橫倒三兩個黑衣鬼差，亦暖落地在他們身側，斜眼一瞧，幾人掙扎不起，身上被一小巧暗器制伏著，也不知那暗器是何功用，竟能將鬼差馴得服服貼貼。
+
+亦暖停頓下來，正是給那鬼差一個乘勝追擊的機會，大刀朝著背心而來，亦暖也不回身，反手往後一帶，獸化的前肢爆著條條青筋，空手接下了刀鋒。
+
+這等蠻力在鬼界甚是少見，鬼差冷不防受到驚駭，他下意識的吞了口沫，兩人實力懸殊之大，令他背脊冷汗直流。
+
+亦暖緩緩回身，她對上他的面目，就像是在仔細分辨這個人，「我好像…在哪裡見過你。」
+
+大刀被獸爪磨出了裂痕，亦暖逼近他，對著他的眼睛，一言一字緩慢道，「哦，我想起來了…是在安向晚的虛境裡。你，在那野嶺裡殺了她…」
+
+那話語似有魔力，話音剛落，那鬼差便似失了氣力般，險些握不住大刀，而亦暖沒打算放過他，她另隻手瞬時擒住他的咽喉，就如同在虛境裡，她要拿下他時那樣。
+
+獸爪劃開他的血肉，滲出血珠，亦暖就要取下他的性命，這時，遠處飛來一枚銀鏢，逼得她必須後退閃避。
+
+僅一步之差，銀鏢打在了她腳邊。亦暖不耐地抬頭去看，安向晚立在石牆上往下望，僅一眼，亦暖便移開了視線，她不顧安向晚警告，再次向前攻向那鬼差。
+
+安向晚擲出的鏢有二，其一是尋常銀鏢，打在了亦暖腳邊，視作威嚇，其一，則是她向來藏著不使用的獵冥鏢，專門對付鬼界貨色。
+
+鏢身入體，鬼差縱然再有能耐，一時也似失了氣力，他雙膝虛軟，滑坐在地，他咬緊後牙，想要起身，試了幾次依舊不成。
+
+亦暖握住他的脖子，將他提起。安向晚躍身而下，朝亦暖走來，行走間，她雙袖輕震，原本鬆散在暗巷間的天罡絲，忽然被扯得緊繃，而亦暖深陷其中，自然逃不過被束縛的命運。
+
+安向晚看著她，說，「莫要添亂。我們此行只為靈丹。」
+
+亦暖冷哼一聲，面上看似不願，卻還是乖乖鬆了手。安向晚不敢大意，邪物顯出時的亦暖相當危險，稍一疏忽，連她都有可能栽在這處。
+
+安向晚將天罡絲纏繞在亦暖身上，將人帶到一旁安置，這才又走回鬼差跟前。
+
+鬼差惡狠狠的盯著他，「你別以為你們逃得過，這城中四處皆有我的同僚，只需再一會功夫，你們…便誰也走不了了！」
+
+「呵。」安向晚在他面前蹲下來，兩指捏住他的下顎，發力往旁邊跩，鬼差受她拉扯，身形踉蹌地往旁邊跌去，他作為鬼差，有權有勢，何曾在鬼界受過這等屈辱，正要發怒，安向晚的聲音適時的從他頭頂上傳來，「你說的那些個同僚，只要一暴露給我發現，便會是那般下場，喏。」
+
+鬼差依言掠過她，再往後看，遠處斜躺著三兩鬼差，身上被獵冥鏢封著，一動不動的，唯有兩個眼珠子，瞪得老大，就快爆出來。
+
+獵冥鏢珍稀，安向晚惜物，曾前總是藏著掖著就是不肯使用，如今，情況危急，逼得她不得不拿出這樣珍寶。而獵冥鏢為數不多，這百年間，她和雨燐不過僅尋來這三十六枚，鬼差難纏，安向晚不好將獵冥鏢回收，只能痛心將物件留在這處了。
+
+鬼差受了束縛失去鬥志，蔫著腦袋，不再反抗，安向晚見他老實下來，便又走回亦暖這處。亦暖安安分分的坐在地上，一雙眼睛老盯著安向晚的臉，安向晚迎著她的目光，忽然笑了起來，「做何這般看著我？」
+
+亦暖也不避諱，依舊盯著她，直言道，「這身裝扮不適合你。」
+
+兩人相處也有段時日了，交情不同以往，安向晚對她的直言不諱，莞爾一笑。
+
+「我曉得，這身衣衫不合身。等我們事畢，我便把這套服裝還給褚守。」
+
+「我不是這個意思。」亦暖眸子散著幽綠的光，看著有些陰狠，可安向晚卻不覺得亦暖眼下是被邪物操縱著，亦暖繼續說，「我的意思是，你不適合這身裝扮。」
+
+「…。」這話重覆了兩次，安向晚不傻笨，自然明白亦暖話中的意思，亦暖指得是鬼差這個身份，並不合適她。但安向晚不明白，亦暖何故對她說這個？
+
+安向晚飄開眼神，蹲下身，與亦暖交談，「你方才粗暴將靈丹捏碎了，我瞧那粉塵繞在你周身，許久不散…我不曾見過這般場面，無法得知這靈丹是否會對你造成影響，所以…」
+
+亦暖這眼神赤裸裸的，總是不移開，安向晚被她看得有些不自在，瞧，這話都要給她說得彆扭了。
+
+「安向晚，你是在擔心我麼？」亦暖失笑道，「還是說，因著靈丹被我不慎毀壞了，你只能好無奈地，將我上交給楚玹？」
+
+安向晚愣了下，急忙轉頭回來看她，慌張道，「我沒有這個意思。你是人類，誤觸靈丹多少會對身體造成影響，只是…只是，若是接觸了不完全的靈丹，我不知曉會產生何種事態。」
+
+亦暖肆無忌憚的覷著她，安向晚受不住她這般，耳根子都被她惹紅了。
+
+「我會來這裡，想當然是因著城南處已事了。」亦暖終於晃開目光，她垂眸看著自己的前肢，邪物在她身上造成的影響，尚未退去，稍顯粗壯的前肢帶著一層雪白皮毛，看著有些嚇人，已然不似人樣。
+
+聞言，安向晚面色露出喜色，「原來那邊已經得手了…」
+
+亦暖見她歡喜，也跟著揚起嘴角。
+
+好一陣子，亦暖的模樣都未得到消退，安向晚不放心她，關切道，「你可有何處不適，何故這獸爪遲遲不見消退？」
+
+亦暖搖頭，綠幽幽的眼睛裡噙著笑意，「若要說不適，許是你這線繩，綁得我身子骨好疼。安姑娘，你能替我解開它麼？」
+
+安向晚默。良久未發話，看上去是在糾結著到底要不要鬆綁她。
+
+亦暖動了動身體，安向晚才又抬眸，亦暖朝她眨了眨眼睛，「我意識清醒得很，瞧，都能同你對談如流了。」
+
+安向晚嘆了一聲，妥協道，「好罷。」
+
+解開天罡絲，安向晚將人扶起，二人雙雙走到那鬼差前。亦暖心裡還是想將人就地拿下，可安向晚不讓，她便尊重她。亦暖問，「這幾個鬼差，你該當如何處置？」
+
+安向晚道，「那邊的，不知前因後果，就這樣放著也無妨。」說著，她將持有大刀的鬼差拉起，「此人，先前與我有過節，我不想輕易放過。但事有輕重緩急，而我的身份，也不好在鬼界久待，不若…」
+
+安向晚的話突然停了，亦暖側頭去看她，「嗯？」
+
+安向晚朝她使了一個眼色，亦暖見狀，了然的將耳朵覆過去，「我曉得你重情重義，恨不得為我打抱不平，可這裡是鬼界，自有他們的理和法，我們非是鬼界中人，不好這般彰顯…」
+
+亦暖面上不做反應，只是眼底眸光沉了幾分，她壓著聲音，道，「你要放過他？」
+
+安向晚沒馬上回答她，而是轉回身，一手在那鬼差胸膛上摸了摸，許是摸索到甚麼，又鑽入衣襟裡去。伸出來時，手中握著一只荷包，「這回算你命大，留你一條活路。不過，刀鋒無眼，先前你傷及了我倆，必須得賠償我們傷藥費，喏，這荷包，我便收下了。」說罷，安向晚朝那鬼差膝蓋上，狠狠踹了一腳，鬼差身體乏力，一時失去支撐，沉沉地跪在了她倆面前。
+
+「哈，不過是饒你一命，此僅小事一樁，用不著行這等大禮罷。」收拾起荷包，安向晚略過鬼差，領著亦暖往巷子外走遠。
+
+鬼差受了屈辱卻不得發洩，只能等待同僚發現他，助他一臂之力，解除獵冥鏢的束縛…在此之前，他只能如尊雕像般跪地不起，實在憋屈。</code></pre>
+				<p id="6c538e87-c8b8-4037-8c05-9bc3c52a2840" class="">
+				</p>
+			</div>
+
+
+			
+			
+		</section>
+		<footer class=article-footer>
+			<section class=article-tags>
+				<a href=/tags/markdown/>連載中 </a>
+				   <!--<a href=../tags/css/>Css </a>
+				   <a href=../tags/html/>Html </a>-->
+				   <a href=../tags/themes/>司南 </a> </section> <section class=article-copyright>
+					<svg class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" />
+						<circle cx="12" cy="12" r="9" />
+						<path d="M14.5 9a3.5 4 0 100 6" />
+					</svg>
+					<span>蔥十七</span>
+			</section>
+		</footer>
+		</article>
+		<!--<div class=disqus-container>
+			<div id=disqus_thread></div>
+			<script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//hugo-theme-stack.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script>
+			<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a> </noscript> <a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span>
+				</a>
+		</div>-->
+		<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
+		<script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script>
+		<footer class=site-footer>
+			<section class="copyright">
+				&copy; 2020 - 2024 Hugo Theme Stack Starter
+				&used; ©chen.uu Studio 2024.
+			</section>
+			<section class="powerby">
+				Built with <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a>
+				<br>
+				Theme <b>
+					<a data-version="3.26.0" href="https://github.com/CaiJimmy/hugo-theme-stack" rel="noopener" target="_blank">Stack</a>
+				</b> designed by <a href="https://jimmycai.com" rel="noopener" target="_blank">Jimmy</a>
+			</section>
+		</footer>
+		<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+			<div class=pswp__bg></div>
+			<div class=pswp__scroll-wrap>
+				<div class=pswp__container>
+					<div class=pswp__item></div>
+					<div class=pswp__item></div>
+					<div class=pswp__item></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class=pswp__top-bar>
+						<div class=pswp__counter></div>
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title=Share></button>
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+						<div class=pswp__preloader>
+							<div class=pswp__preloader__icn>
+								<div class=pswp__preloader__cut>
+									<div class=pswp__preloader__donut></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class=pswp__share-tooltip></div>
+					</div>
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+					</button>
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+					<div class=pswp__caption>
+						<div class=pswp__caption__center></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script>
+		<script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script>
+		<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous>
+		<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous>
+		</main>
+		</div>
+		<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script>
+		<script type=text/javascript src=/ts/main.js defer></script>
+		<script>
+			(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()
+		</script>
+		</body>
+</html>
